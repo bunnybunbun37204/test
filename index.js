@@ -4,7 +4,6 @@ const multer = require('multer');
 const cors = require('cors');
 const app = express();
 const PORT = 4000;
-require('dotenv').config();
 
 const corsOptions = {
     origin: ['http://localhost:3000', 'http://localhost:5000'],
