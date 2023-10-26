@@ -7,7 +7,7 @@ app.listen(PORT, () => {
     console.log("hello world");
 });
 
-mongoose.connect(process.env.URI, {
+mongoose.connect("mongodb+srv://bunyawat:Asd_0949823192@cluster0.nqv9e.mongodb.net/", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
