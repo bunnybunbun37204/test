@@ -2,14 +2,19 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const PORT = 4000;
+require('dotenv').config()
 
 app.listen(PORT, () => {
     console.log("hello world");
 });
 
-mongoose.connect("mongodb+srv://bunyawat:Asd_0949823192@cluster0.nqv9e.mongodb.net/", {
+mongoose.connect(process.env.URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+  }).then(() => {
+    console.log("Connect to mongo db")
+  }).catch((err) => {
+    console.log(err);
   });
 
 app.get('/', (req, res) => {
